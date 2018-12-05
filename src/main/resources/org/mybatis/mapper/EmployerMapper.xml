@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tact.base.mybatis.mapper.EmployerMapper">
+ 
+    <select id="findById" resultType="org.tact.base.mybatis.domain.Employer" parameterType="long">
+        select * from employer where id = #{id} limit 1
+    </select>    
+   
+    <select id="findByName" resultType="org.tact.base.mybatis.domain.Employer" parameterType="string">
+        select * from employer where name = #{name} limit 1
+    </select>    
+  
+    <insert id="addEmployer" parameterType="map">		
+		INSERT INTO EMPLOYER
+		(
+		ID, NAME, LINKEDIN, WEBSITE 
+		)	VALUES(#{ID}, #{NAME}, #{LINKEDIN}, #{WEBSITE}, now())
+	</insert>  
+	
+	<select id="getEmployer" resultType="map">
+		SELECT 
+			ID AS 'id',
+			NAME AS 'name',
+			LINKEDIN AS 'linkedin',
+			WEBSITE AS 'website'
+		FROM EMPLOYER
+		WHERE ID = #{ID}
+	</select>
+  
+	<delete id="deleteEmployer">
+		DELETE FROM EMPLOYER
+		WHERE ID = #{ID}
+	</delete>	
+
+</mapper>

@@ -5,6 +5,8 @@
 <configuration>
 
 	<mappers>
-        <mapper resource="org/mybatis/mapper/CityMapper.xml"/>        
+        <mapper resource="org/mybatis/mapper/EmployerMapper.xml"/>        
+        
+        <mapper resource="org/mybatis/mapper/EmployeeMapper.xml"/>        
     </mappers>
 </configuration>

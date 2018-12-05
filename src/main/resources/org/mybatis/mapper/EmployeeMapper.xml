@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tact.base.mybatis.mapper.EmployeeMapper">
+ 
+    <select id="findById" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
+        select * from employee where id = #{id} limit 1
+    </select>    
+   
+    <select id="findByEmployer_id" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
+        select * from employee where employer_id = #{employer_id} limit 1
+    </select>    
+  
+    <insert id="addEmployee" parameterType="map">		
+		INSERT INTO EMPLOYEE
+		(
+		ID, EMPLOYER_ID, LINKEDIN, SKILLS 
+		)	VALUES(#{ID}, #{EMPLOYER_ID}, #{LINKEDIN}, #{SKILLS}, now())
+	</insert>  
+	
+	<select id="getEmployee" resultType="map">
+		SELECT 
+			ID AS 'id',
+			EMPLOYER_ID AS 'employer_id',
+			LINKEDIN AS 'linkedin',
+			SKILLS AS 'skills'
+		FROM EMPLOYEE
+		WHERE ID = #{ID}
+	</select>
+  
+	<delete id="deleteEmployee">
+		DELETE FROM EMPLOYEE
+		WHERE ID = #{ID}
+	</delete>	
+
+</mapper>

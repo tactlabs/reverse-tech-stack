@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.tact.base.mybatis.mapper.CityMapper;
 
 @RestController
-@RequestMapping(value = "/base")
+@RequestMapping(value = "/bases")
 public class BaseController {
 	
 	@Autowired
@@ -23,7 +23,7 @@ public class BaseController {
 	 * @return
 	 * 
 	 * Possible urls:
-	 * 		http://localhost:1878/base/
+	 * 		http://localhost:1878/bases/
 	 */
     @GetMapping(value = "")
     public <T> T testBase() {
