@@ -2,6 +2,7 @@ package org.tact.base.rest;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -89,16 +90,11 @@ public class EmployerController {
      */
     @PostMapping(value = {"/add/employer"})
 	public  <T> T addEmployer(
-		@RequestParam(value = "id")Long id,
-		@RequestParam(value = "name")String name,
-		@RequestParam(value = "linkedin") String linkedin,
-		@RequestParam(value = "website") String website
+		@RequestParam(value = "id")Long id
 	)
 	{
     	Map<String, Object> params = new HashMap<String, Object>();
-    	params.put("NAME", name);
-    	params.put("LINKEDIN", linkedin);
-    	params.put("WEBSITE", website);
+    	params.put("ID", id);
 		employerMapper.addEmployer(params);
 		 
 	    Map<String, Object> map = new LinkedHashMap<String, Object>();
@@ -121,21 +117,16 @@ public class EmployerController {
      */
 	@GetMapping(value = {"/get/employer"})
 	public  <T> T getEmployer(
-		@RequestParam(value = "id") Long id,
-		@RequestParam(value = "name") String name,
-		@RequestParam(value = "linkedin") String linkedin,
-		@RequestParam(value = "website") String website
+		@RequestParam(value = "id") Long id
 	)
 	{
 		Map<String, Object> params = new HashMap<String, Object>();
 		params.put("ID", id);
-		params.put("NAME",name);
-		params.put("LINKEDIN", linkedin);
-		params.put("WEBSITE", website);
 
-		employerMapper.getEmployer(params);
+		List<Map<String, Object>> employerList = employerMapper.getEmployer(params);
 		
 	    Map<String, Object> map = new LinkedHashMap<String, Object>();
+	    map.put("apivalue", employerList);
 	    map.put("apiresult", 0);
 	    map.put("apimessage", "ok");
 	
