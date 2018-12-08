@@ -15,8 +15,8 @@
     <insert id="addEmployer" parameterType="map">		
 		INSERT INTO EMPLOYER
 		(
-		ID, NAME, LINKEDIN, WEBSITE 
-		)	VALUES(#{ID}, #{NAME}, #{LINKEDIN}, #{WEBSITE}, now())
+		NAME, LINKEDIN, WEBSITE 
+		)	VALUES(#{NAME}, #{LINKEDIN}, #{WEBSITE})
 	</insert>  
 	
 	<select id="getEmployer" resultType="map">

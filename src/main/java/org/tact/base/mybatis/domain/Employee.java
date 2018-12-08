@@ -8,7 +8,7 @@ public class Employee implements Serializable {
 
 	private Long id;
 
-	private Long employer_id;
+	private Long employerId;
 
 	private String linkedin;
 
@@ -25,13 +25,13 @@ public class Employee implements Serializable {
 	}
 
 
-	public Long getEmployer_id() {
-		return employer_id;
+	public Long getEmployerId() {
+		return employerId;
 	}
 
 
-	public void setEmployer_id(Long employer_id) {
-		this.employer_id = employer_id;
+	public void setEmployerId(Long employerId) {
+		this.employerId = employerId;
 	}
 
 
@@ -57,6 +57,6 @@ public class Employee implements Serializable {
 
 	@Override
 	public String toString() {
-		return getId() + "," + getEmployer_id() + "," + getLinkedin() + "," + getSkills();
+		return getId() + "," + getEmployerId() + "," + getLinkedin() + "," + getSkills();
 	}	
 }

@@ -90,11 +90,16 @@ public class EmployerController {
      */
     @PostMapping(value = {"/add/employer"})
 	public  <T> T addEmployer(
-		@RequestParam(value = "id")Long id
+		@RequestParam(value = "name")String name,
+		@RequestParam(value = "linkedin")String linkedin,
+		@RequestParam(value = "website")String website
 	)
 	{
     	Map<String, Object> params = new HashMap<String, Object>();
-    	params.put("ID", id);
+    	params.put("NAME", name);
+    	params.put("LINKEDIN", linkedin);
+    	params.put("WEBSITE", website);
+    	
 		employerMapper.addEmployer(params);
 		 
 	    Map<String, Object> map = new LinkedHashMap<String, Object>();

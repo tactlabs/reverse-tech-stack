@@ -8,18 +8,18 @@
         select * from employee where id = #{id} limit 1
     </select>    
    
-    <select id="findByEmployer_id" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
-        select * from employee where employer_id = #{employer_id} limit 1
+    <select id="findByEmployerId" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
+        select * from employee where employer_id = #{employer_id}
     </select>    
   
     <insert id="addEmployee" parameterType="map">		
 		INSERT INTO EMPLOYEE
 		(
-		ID, EMPLOYER_ID, LINKEDIN, SKILLS 
-		)	VALUES(#{ID}, #{EMPLOYER_ID}, #{LINKEDIN}, #{SKILLS}, now())
+		EMPLOYER_ID, LINKEDIN, SKILLS 
+		)	VALUES(#{EMPLOYER_ID}, #{LINKEDIN}, #{SKILLS})
 	</insert>  
 	
-	<select id="getEmployee" resultType="map">
+	<select id="byEmployee" resultType="map">
 		SELECT 
 			ID AS 'id',
 			EMPLOYER_ID AS 'employer_id',

@@ -2,6 +2,7 @@ package org.tact.base.rest;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +61,7 @@ public class EmployeeController {
     
     /**
      * 
-     * @param employer_id
+     * @param employerId
      * @return
      * 
      * Possible urls:
@@ -68,12 +69,12 @@ public class EmployeeController {
      * 
      */
     @GetMapping(value = "/by/employer_id")
-    public <T> T getEmployeeByEmployer_id(
-    		@RequestParam(value = "employer_id")Long employer_id) {
+    public <T> T getEmployeeByEmployerId(
+    		@RequestParam(value = "employer_id")Long employerId) {
         Map<String, Object> map = new LinkedHashMap<String, Object>();
         
-        map.put("employer_id", employer_id);
-        map.put("employee", employeeMapper.findByEmployer_id(employer_id));
+        map.put("employer_id", employerId);
+        map.put("employee", employeeMapper.findByEmployerId(employerId));
         
         return (T) map;
     }
@@ -91,16 +92,16 @@ public class EmployeeController {
      */
     @PostMapping(value = {"/add/employee"})
 	public  <T> T addEmployee(
-		@RequestParam(value = "id")Long id,
-		@RequestParam(value = "employer_id")Long employer_id,
+		@RequestParam(value = "employer_id")Long employerId,
 		@RequestParam(value = "linkedin") String linkedin,
 		@RequestParam(value = "skills") String skills
 	)
 	{
     	Map<String, Object> params = new HashMap<String, Object>();
-    	params.put("EMPLOYER_ID", employer_id);
+    	params.put("EMPLOYER_ID", employerId);
     	params.put("LINKEDIN", linkedin);
     	params.put("SKILLS", skills);
+    	
 		employeeMapper.addEmployee(params);
 		 
 	    Map<String, Object> map = new LinkedHashMap<String, Object>();
@@ -110,41 +111,6 @@ public class EmployeeController {
 	    return (T) map;
 	}
     
-    /**
-     * 
-     * @param id
-     * @param employer_id
-     * @param linkedin
-     * @param skills
-     * @return
-     * 
-     * Possible urls:
-	 * 		http://localhost:1878/employee/get/employee
-     */
-	@GetMapping(value = {"/get/employee"})
-	public  <T> T getEmployee(
-		@RequestParam(value = "id") Long id,
-		@RequestParam(value = "employer_id") Long employer_id,
-		@RequestParam(value = "linkedin") String linkedin,
-		@RequestParam(value = "skills") String skills
-	)
-	{
-		Map<String, Object> params = new HashMap<String, Object>();
-		params.put("ID", id);
-		params.put("EMPLOYER_ID",employer_id);
-		params.put("LINKEDIN", linkedin);
-		params.put("SKILLS", skills);
-
-		employeeMapper.getEmployee(params);
-		
-	    Map<String, Object> map = new LinkedHashMap<String, Object>();
-	    map.put("apiresult", 0);
-	    map.put("apimessage", "ok");
-	
-	    return (T) map;
-		
-	}
-
 	/**
 	 * 
 	 * @param id

@@ -14,7 +14,7 @@ public interface EmployerMapper {
 
 	Employer findByName(@Param("name") String name);
 
-	void addEmployer(Map<String, Object> learningParms);
+	void addEmployer(Map<String, Object> params);
 
 	List<Map<String, Object>> getEmployer(Map<String, Object> params);
 	
