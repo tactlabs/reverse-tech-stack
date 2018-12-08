@@ -141,8 +141,7 @@ public class EmployeeController {
 	 * 		http://localhost:1878/skills/by/employer_id
 	 * 
 	 */
-	
-    @GetMapping(value = "/skills/by/employer_id")
+	@GetMapping(value = "/skills/by/employer_id")
     public <T> T getSkillsByEmployerId(
     		@RequestParam(value = "employer_id")Long employer_id) {
         Map<String, Object> map = new LinkedHashMap<String, Object>();

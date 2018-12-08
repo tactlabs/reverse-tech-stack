@@ -6,6 +6,68 @@
 	},
 	"item": [
 		{
+			"name": "employerById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employer/by/id?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employer",
+						"by",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employerByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employer/by/name?name=murali",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employer",
+						"by",
+						"name"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "murali"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "deleteEmployer",
 			"request": {
 				"method": "GET",
@@ -225,13 +287,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:1878/skills/by/employer_id?employer_id=1",
+					"raw": "http://localhost:1878/employee/skills/by/employer_id?employer_id=1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "1878",
 					"path": [
+						"employee",
 						"skills",
 						"by",
 						"employer_id"
