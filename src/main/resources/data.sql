@@ -6,4 +6,11 @@ INSERT INTO EMPLOYER (ID, NAME, LINKEDIN, WEBSITE) VALUES ('3', 'VINAY', 'srivin
 
 DELETE FROM EMPLOYEE;
 ALTER TABLE EMPLOYEE AUTO_INCREMENT = 1;
-INSERT INTO EMPLOYEE (ID, EMPLOYER_ID, LINKEDIN, SKILLS) VALUES ('1', '1', 'aravapallimurali.am@gmail.com', 'SoftwareDeveloper, Java');
+INSERT INTO EMPLOYEE (EMPLOYER_ID, LINKEDIN, SKILLS) 
+VALUES (1, "https://www.linkedin.com/in/aravapalli-muralikrishna-a02a78155/", "Python, Java");
+
+INSERT INTO EMPLOYEE(EMPLOYER_ID, LINKEDIN, SKILLS)
+VALUES(1, "https://www.linkedin.com/in/sri-vinay-appari-8aa049148/", "Python, Java");
+
+INSERT INTO EMPLOYEE(EMPLOYER_ID, LINKEDIN, SKILLS)
+VALUES(1, "https://www.linkedin.com/in/satyadivya-maddipudi-34300b159/", "Python, Java");

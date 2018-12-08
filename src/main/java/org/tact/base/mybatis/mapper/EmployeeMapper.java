@@ -12,12 +12,15 @@ public interface EmployeeMapper {
 	
 	Employee findById(@Param("id") Long id);
 
-	Employee findByEmployerId(@Param("employer_id") Long employerId);
+	List<Employee> findByEmployerId(@Param("employer_id") Long employerId);
 
 	void addEmployee(Map<String, Object> Params);
 
 	List<Map<String, Object>> byEmployee(Map<String, Object> params);
 	
 	Integer deleteEmployee(@Param("ID") Long id);
+	
+	List<Employee> findSkillsByEmployerId(@Param("employer_id") Long employerId);
+
 	
 }

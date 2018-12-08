@@ -1,0 +1,272 @@
+{
+	"info": {
+		"_postman_id": "7c27c3ad-aad6-49fa-bc3e-7757e2bfcf70",
+		"name": "RTS_localhost",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "deleteEmployer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employer/delete/employer?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employer",
+						"delete",
+						"employer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employer/get/employer?id=1&sessionid=73c6583d0446211ed887dd025dc3a1d382a395f1593aaefa2db0194a2e6665f2e0a5de1a780c97c0acd961cbed39bb9b7335913700f563350eec874a55e9987a4f171b0848891db44c2552a2e59acaef1966b551b30d97e221818f4e6af86464&apikey=wf2537572d6f7b795a713c5e6w",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employer",
+						"get",
+						"employer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "sessionid",
+							"value": "73c6583d0446211ed887dd025dc3a1d382a395f1593aaefa2db0194a2e6665f2e0a5de1a780c97c0acd961cbed39bb9b7335913700f563350eec874a55e9987a4f171b0848891db44c2552a2e59acaef1966b551b30d97e221818f4e6af86464"
+						},
+						{
+							"key": "apikey",
+							"value": "wf2537572d6f7b795a713c5e6w"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEmployer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employer/add/employer?name=ramya&linkedin=ramya@gmail.com&website=ramya.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employer",
+						"add",
+						"employer"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ramya"
+						},
+						{
+							"key": "linkedin",
+							"value": "ramya@gmail.com"
+						},
+						{
+							"key": "website",
+							"value": "ramya.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employee/by/id?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employee",
+						"by",
+						"id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employee/by/employer_id?employer_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employee",
+						"by",
+						"employer_id"
+					],
+					"query": [
+						{
+							"key": "employer_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employee/add/employee?employer_id=2&linkedin=muthumabi@gmail.com&skills=linux, ubuntu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employee",
+						"add",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "employer_id",
+							"value": "2"
+						},
+						{
+							"key": "linkedin",
+							"value": "muthumabi@gmail.com"
+						},
+						{
+							"key": "skills",
+							"value": "linux, ubuntu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSkillsByEmployerId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/skills/by/employer_id?employer_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"skills",
+						"by",
+						"employer_id"
+					],
+					"query": [
+						{
+							"key": "employer_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a1f2e20a-5663-4653-bece-c6091e4424e7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "842a82d1-8470-46cf-9585-8756ee477fc5",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

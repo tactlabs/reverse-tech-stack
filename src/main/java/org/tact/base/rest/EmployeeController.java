@@ -132,5 +132,26 @@ public class EmployeeController {
 	
 	    return (T) map;
 	}
+	/**
+	 * 
+	 * @param employer_id
+	 * @return
+	 * 
+	 *Possible urls:
+	 * 		http://localhost:1878/skills/by/employer_id
+	 * 
+	 */
+	
+    @GetMapping(value = "/skills/by/employer_id")
+    public <T> T getSkillsByEmployerId(
+    		@RequestParam(value = "employer_id")Long employer_id) {
+        Map<String, Object> map = new LinkedHashMap<String, Object>();
+        
+        map.put("employer_id", employer_id);
+        map.put("employee", employeeMapper.findSkillsByEmployerId(employer_id));
+        
+        return (T) map;
+    }
+
 
 }

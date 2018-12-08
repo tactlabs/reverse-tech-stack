@@ -5,7 +5,7 @@
 <mapper namespace="org.tact.base.mybatis.mapper.EmployeeMapper">
  
     <select id="findById" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
-        select * from employee where id = #{id} limit 1
+        select * from employee where id = #{id}
     </select>    
    
     <select id="findByEmployerId" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
@@ -33,5 +33,9 @@
 		DELETE FROM EMPLOYEE
 		WHERE ID = #{ID}
 	</delete>	
+	
+	<select id="findSkillsByEmployerId" resultType="org.tact.base.mybatis.domain.Employee" parameterType="long">
+        select skills from employee where employer_id = #{employer_id}
+    </select>  
 
 </mapper>
