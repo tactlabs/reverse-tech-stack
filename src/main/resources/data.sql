@@ -14,3 +14,10 @@ VALUES(1, "https://www.linkedin.com/in/sri-vinay-appari-8aa049148/", "Python, Ja
 
 INSERT INTO EMPLOYEE(EMPLOYER_ID, LINKEDIN, SKILLS)
 VALUES(1, "https://www.linkedin.com/in/satyadivya-maddipudi-34300b159/", "Python, Java");
+
+
+
+INSERT INTO EMPLOYER (NAME, LINKEDIN, WEBSITE) VALUES ('Uknowva', 'https://www.linkedin.com/company/uknowvaplatform/', '.https://uknowva.com');
+
+
+
