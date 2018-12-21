@@ -1,0 +1,207 @@
+-- --------------------------------------------------------
+-- Host:                         127.0.0.1
+-- Server version:               10.1.30-MariaDB - mariadb.org binary distribution
+-- Server OS:                    Win32
+-- HeidiSQL Version:             9.5.0.5196
+-- --------------------------------------------------------
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+-- Dumping structure for table vinay.employee
+CREATE TABLE IF NOT EXISTS `employee` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `EMPLOYER_ID` int(11) DEFAULT NULL,
+  `LINKEDIN` varchar(500) DEFAULT NULL,
+  `SKILLS` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `LINKEDIN` (`LINKEDIN`)
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table vinay.employee: ~119 rows (approximately)
+DELETE FROM `employee`;
+/*!40000 ALTER TABLE `employee` DISABLE KEYS */;
+INSERT INTO `employee` (`ID`, `EMPLOYER_ID`, `LINKEDIN`, `SKILLS`) VALUES
+	(1, 1, 'https://www.linkedin.com/in/aravapalli-muralikrishna-a02a78155/', 'Python, Java'),
+	(2, 1, 'https://www.linkedin.com/in/sri-vinay-appari-8aa049148/', 'Python, Java'),
+	(3, 1, 'https://www.linkedin.com/in/satyadivya-maddipudi-34300b159/', 'Python, AWS'),
+	(4, 9, 'https://www.linkedin.com/in/annapurna-talluri-scjp-0694a153/', 'JavaServer pages, Servlets, angularJs, c, C  '),
+	(5, 9, 'https://www.linkedin.com/in/vigneshwer-sekar-450823126/', 'Full Stack Developer, Java, c'),
+	(6, 9, 'https://www.linkedin.com/in/divya-sree-974a01137/', 'Spring , Mysql, Struts, Hibernate'),
+	(7, 8, 'https://www.linkedin.com/in/anu-davis-77554990/', 'JQuery, Javascript'),
+	(8, 8, 'https://www.linkedin.com/in/arvind-sharma-8bb1567b/', 'SQL, QTP, Quality Center, Windows'),
+	(9, 8, 'https://www.linkedin.com/in/aneesh-devassy-4450b3a4/', 'jQuery, HTML5, JavaScript'),
+	(10, 10, 'https://www.linkedin.com/in/anshulbansal2209/', 'ReactJs, jQuer UI, Matlab'),
+	(11, 10, 'https://www.linkedin.com/in/bharatghimire/', 'CoreJava, Git, HTML'),
+	(12, 10, 'https://www.linkedin.com/in/mayank-negi-673ba772/', 'MYSQL, Docker, Terraform'),
+	(13, 6, 'https://www.linkedin.com/in/zainul-abideen-3bb58311/', 'GSM, WiMAX, Cisco Technologies'),
+	(14, 6, 'https://www.linkedin.com/in/abarna-sarathy-831b92126/', 'Software Enginner'),
+	(15, 6, 'https://www.linkedin.com/in/arul-sophiya-r-17470613a/', 'C, Java, Operating Systems'),
+	(16, 7, 'https://www.linkedin.com/in/manikandancs/', 'Eclipse, Python, Github'),
+	(17, 7, 'https://www.linkedin.com/in/pramukh-dasari-193851109/', 'SQL, SAS'),
+	(18, 7, 'https://www.linkedin.com/in/shubhashis-sinha-69a9b575/', 'Oozie, SQL, Tableau'),
+	(19, 5, 'https://www.linkedin.com/in/preethielango/', 'Java, MySQL, Core Java'),
+	(20, 5, 'https://www.linkedin.com/in/saundarya-selvaraju-028081127/', 'Java, WebApplicationDevelopment, Android Development'),
+	(21, 5, 'https://www.linkedin.com/in/muniyandi-s-5b047445/', 'JavaScript, jQuery, PHP'),
+	(22, 12, 'http://www.linkedin.com/in/abhinandan-kumar-44895264', 'java,data structure devloper'),
+	(23, 12, 'https://www.linkedin.com/in/anand-kumar-8b4a68172/', 'java,javascript software engineer'),
+	(24, 12, 'https://www.linkedin.com/in/jayanthi-r-16023512a/', 'C, Php, asp.net, Software engineer'),
+	(25, 11, 'http://www.linkedin.com/in/abhinav-kumar-0a6b9580', 'jquery, html5, javascript developer'),
+	(26, 11, 'https://www.linkedin.com/in/vigneshwaran-svw-016477b2/', 'c, html5, jquery, web developer'),
+	(27, 11, 'https://www.linkedin.com/in/aparna-jha-96705295/', 'jquery, html5, javascript, web developer'),
+	(28, 13, 'http://www.linkedin.com/in/abhinand-anigani-4601a229', 'python, html5, javascript devloper'),
+	(29, 13, 'https://www.linkedin.com/in/bhaskar-bharali-b378a192/', 'c, sql, java devloper'),
+	(30, 13, 'https://www.linkedin.com/in/aruna-barani-322b4753/', 'jquery, software engineer'),
+	(31, 4, 'https://www.linkedin.com/in/aadarsh-jain-a5b85511a', 'java, html, sql, javaScript devloper'),
+	(32, 4, 'https://www.linkedin.com/in/abhinav-jaiswal-85722053/', 'ASP.NET, HTML5, microsoftSQL Server devloper'),
+	(33, 4, 'https://www.linkedin.com/in/anagha-tondwalkar-56a49210b/', 'HTML, java, jQuery devloper'),
+	(35, 20, 'https://www.linkedin.com/in/aakash-goel-006b61bb/', 'AngularJS, SASS, Bootstrap devloper'),
+	(36, 20, 'https://www.linkedin.com/in/rajaishbt/', 'AngularJS, SASS, Bootstrap devloper'),
+	(37, 20, 'https://www.linkedin.com/in/kamal-kishore-bb532321/', 'JavaScript, ASP.NET devloper'),
+	(38, 22, 'https://www.linkedin.com/in/aarti-parmar-6217226b/', 'HTML, ASP.NET, java devloper'),
+	(39, 22, 'https://www.linkedin.com/in/rajeshree-gajjar-99967877/', 'ASP.net, sql, html engineer'),
+	(40, 22, 'https://www.linkedin.com/in/pratik-vyas-ba110591/', 'sql,mysql,php database engineer'),
+	(41, 23, 'https://www.linkedin.com/in/aashish-bhardwaj-892239b2/', 'html, javascript, sql devloper'),
+	(42, 23, 'https://www.linkedin.com/in/saurabh-saxena-88496a3a/', 'sql, javaScript, mysql devloper'),
+	(43, 23, 'https://www.linkedin.com/in/madhur-vashisth-a3a107115/', 'ASP.net, sql, html devloper'),
+	(44, 25, 'https://www.linkedin.com/in/aashish-k-m-5a5700110/', 'c'),
+	(46, 25, 'https://www.linkedin.com/in/karthikkgunasekaran/', 'angularja, sql server, html devloper'),
+	(47, 25, 'https://www.linkedin.com/in/indhumathi-elangovan-390542167/', 'angularja, sql server,html devloper'),
+	(48, 26, 'https://www.linkedin.com/in/anitha-b-m-1b2a5b38/', 'HTML, C'),
+	(49, 26, 'https://www.linkedin.com/in/sonali-bhavsar-78380188/', 'Unix, SQL, HGTML, Git'),
+	(50, 26, 'https://www.linkedin.com/in/rajil-kv-ba37ba96/', 'MySQL, AWS, Git, Bootstrap'),
+	(51, 26, 'https://www.linkedin.com/in/rajeev-ranjan-43211b3a/', 'AngularJS, JavaScript, Html, SQL'),
+	(52, 26, 'https://www.linkedin.com/in/bhuvaneshwari-s-b4510a142/', 'AngularJS, jQuery, MySQL,HTML'),
+	(53, 26, 'https://www.linkedin.com/in/singh16/', 'JavaScript, HTML, SQL, AngularJS'),
+	(54, 26, 'https://www.linkedin.com/in/tindo-sunny-77126ba4/', '.NET, SQL, OS'),
+	(55, 26, 'https://www.linkedin.com/in/rahul-kumar-5247b9149/', 'Ms sql,Networking'),
+	(56, 26, 'https://www.linkedin.com/in/vikas-b-518834129/', 'Bootstrap, asp.net, mysql'),
+	(57, 26, 'https://www.linkedin.com/in/krishanu-das-895a79152/', 'C, Java, Web Development'),
+	(58, 27, 'https://www.linkedin.com/in/lokiiarora/', 'CSS, HTML, Node.js'),
+	(59, 27, 'https://www.linkedin.com/in/tapan-rai/', 'Angular, JSON, C, Java'),
+	(60, 27, 'https://www.linkedin.com/in/devika-ga/', 'Servers, Hyper-v, OS, Windows'),
+	(61, 27, 'https://www.linkedin.com/in/libin-renold-14a26899/', 'Python, Swift, Xcode, Bash'),
+	(62, 27, 'https://www.linkedin.com/in/muthurathinam/', 'HTML5, Tomcat, Struts'),
+	(63, 27, 'https://www.linkedin.com/in/sskinnovate/', '.NET, XML, Java, Oracle'),
+	(64, 27, 'https://www.linkedin.com/in/ramji1204/', 'Oracle, SAP ERP, SQL'),
+	(65, 27, 'https://www.linkedin.com/in/satyakamasani/', 'AWS, Spring, EJB'),
+	(66, 27, 'https://www.linkedin.com/in/jayasurya-jeyakodi-82753b20/', 'SQL, HTL, MySQL'),
+	(68, 27, 'https://www.linkedin.com/in/mathi-jeyakaran-jayaraj-182554a/', 'Web Design, Web Development, SDLC'),
+	(69, 28, 'http://www.linkedin.com/in/anish-haldiya-a5a92158', 'Java, C  , NetBeaans, Linux, Python'),
+	(70, 28, 'https://www.linkedin.com/in/tarun-sen/', 'JSP, SQL, DB2, JavaScript'),
+	(71, 28, 'https://www.linkedin.com/in/yash-srivastava-566212a0/', 'PHP, .NET, Java'),
+	(72, 29, 'http://www.linkedin.com/in/ankur-panseriya-b74950113', 'c, c  , java, HTML, Linux'),
+	(73, 29, 'https://www.linkedin.com/in/sakthivel-velayutham-20202aab/', 'Adobe Photoshop, NetBeans, Eclipse'),
+	(74, 29, 'https://www.linkedin.com/in/naveen-kumar-01766185/', 'MySQL, Selenium WebDriver, Linux'),
+	(75, 29, 'https://www.linkedin.com/in/akshay-kumar-945251168/', 'SoapUI, Oracle Database, SQL, Unix'),
+	(76, 29, 'https://www.linkedin.com/in/sanjeetnishad95/ ', 'Spring Framework, MySQL, Java, Unix'),
+	(77, 29, 'https://www.linkedin.com/in/padmanaban-sridar-65332115/', 'Java, Python'),
+	(78, 29, 'https://www.linkedin.com/in/shashi-shekhar-95b32668/', 'Java, SQL, JavaScript, MySQL'),
+	(80, 29, 'https://www.linkedin.com/in/rachitsrivastava1993/', 'HTML, CSS, C, Java, Jquery'),
+	(81, 29, 'https://www.linkedin.com/in/mahesh-raju-somalaraju-71227830/', 'Docker, Core Java, JavaScript, Linux'),
+	(83, 29, 'https://www.linkedin.com/in/krishna-reddy-932b35143/', 'Big Data, Hadoop, Apache Spark'),
+	(84, 30, 'https://www.linkedin.com/in/ankitgomkale/', 'C, Node.js, Python'),
+	(86, 30, 'https://www.linkedin.com/in/venubodapati/', 'MongoDB, Databases, Unix, AWS'),
+	(87, 30, 'https://www.linkedin.com/in/rajagopal-b-483593135/', 'Java, Selenium, Selenium WebDriver'),
+	(88, 30, 'https://www.linkedin.com/in/ganeshj4/', 'HTML, CSS, C  , jQuery, React.js'),
+	(90, 30, 'https://www.linkedin.com/in/viswanathansellamuthu/', 'HTML, CSS, jQuery, JavaScript'),
+	(91, 30, 'https://www.linkedin.com/in/indranil-majumder-8025349/', 'Spring, Linux, Oracle, JavaScript'),
+	(92, 30, 'https://www.linkedin.com/in/rajmohan-dheenadayalan-533a55a5/', 'HTML, C  , ASP.NET, CSS'),
+	(93, 30, 'https://www.linkedin.com/in/preethi-yuvaraj-a7a40148/', 'JavaScript, SQL, C PHP, jQuery'),
+	(95, 31, 'https://www.linkedin.com/in/ankitabajpai/', 'JavaScript, SQL, XML, Linux'),
+	(96, 31, 'https://www.linkedin.com/in/jasonabumathews/', 'AutoCAD, C  , C, Java'),
+	(97, 31, 'https://www.linkedin.com/in/arpita-deb-a4447362/', 'Spring Framework, Hibernate, JDBC, JIRA, Oracle SQL'),
+	(98, 31, 'https://www.linkedin.com/in/kumarakashdeep/', 'C  , SQL, Perl, Java'),
+	(99, 31, 'https://www.linkedin.com/in/archana-ramkumar-a11762119/', 'Python, DBMS, Java'),
+	(100, 31, 'https://www.linkedin.com/in/shubham-bansal-34b58590/', 'PHP, Linux, MySQL'),
+	(101, 31, 'https://www.linkedin.com/in/vasantha-kumar-7a124424/', 'PL/SQL, SQL, Java, C  '),
+	(102, 31, 'https://www.linkedin.com/in/senthilmuthuraj93/', 'Oracle RAC, Database Administration'),
+	(103, 31, 'https://www.linkedin.com/in/faheem-surkhi-8397b7150/', 'Data Center Management'),
+	(105, 31, 'https://www.linkedin.com/in/komal-thakkar-16ab81147/', 'Machine Learning, Data Analysis, Data Mining'),
+	(106, 33, 'https://www.linkedin.com/in/ankit-gupta-1b730543/', 'PHP, C  , Core Java'),
+	(107, 33, 'https://www.linkedin.com/in/ritesh-bhat-528895a3/', 'Python, AWS Lambda, HTML, Git'),
+	(108, 33, 'https://www.linkedin.com/in/hari-haran-a75a2271/', 'networking, computer hardware'),
+	(109, 34, 'http://www.linkedin.com/in/anirudh-k-3a2bb0112', 'Linux, jQuery, HTML'),
+	(110, 34, 'https://www.linkedin.com/in/midhun-babu-a501a0140/', 'MySQL, HTML, JavaScript'),
+	(111, 34, 'https://www.linkedin.com/in/binil-kt-77bb7435/', 'AWS, JavaScript, HTML, AJAX'),
+	(112, 34, 'https://www.linkedin.com/in/sujesh-v-1b500860/', 'jQuery, CSS, HTML5'),
+	(113, 34, 'https://www.linkedin.com/in/ranju-raj-046860132/', 'jQuery, MySQL, PHP, AJAX'),
+	(114, 34, 'https://www.linkedin.com/in/megha-ni-1b55377a/', 'PHP, AJAX, jQuery'),
+	(115, 34, 'https://www.linkedin.com/in/anirudh-k-3a2bb0112/', 'Linux, jQuery, HTML'),
+	(116, 34, 'https://www.linkedin.com/in/neeraj-venu-8157b5134/', 'Linux, PHP, AJAX, Git'),
+	(117, 34, 'https://www.linkedin.com/in/sasheendran-koroth-1877ab104/', 'JavaScript, MySQL, C  '),
+	(118, 34, 'https://www.linkedin.com/in/shabnakabeer/', 'C, SQL, CoreJava, .NET'),
+	(119, 35, 'https://www.linkedin.com/in/ajay-azhahendiran-b0a033105/', 'Java Deveoloper'),
+	(120, 35, 'https://www.linkedin.com/in/mageshz-harimoorthy-8b2071116/', 'Linux, HTML, MYSQL, Git'),
+	(121, 35, 'https://www.linkedin.com/in/abishek-stephen-9963642a/', 'RESTful webservices, jQuery, CSS, NoSQL'),
+	(122, 35, 'https://www.linkedin.com/in/rkvigneswaran/', 'C  , jQuery, SQL'),
+	(123, 35, 'https://www.linkedin.com/in/yeshwanth-k-356419105/', 'C, XML, jQuery'),
+	(124, 35, 'https://www.linkedin.com/in/sreebasavamanju/', 'C  , HTML, Docker'),
+	(125, 35, 'https://www.linkedin.com/in/sibi-varman-a4007a75/', 'C  , C, Java'),
+	(126, 35, 'https://www.linkedin.com/in/suryakumar29/', 'Java, SQL, JavaScript'),
+	(127, 35, 'https://www.linkedin.com/in/praveensukumar/', 'MySQL, XML, JavaScript, Spring'),
+	(128, 35, 'https://www.linkedin.com/in/chockalinga-prasanna-bbbb96119/', 'Spring Framework, AngularJS, Ionic Framework'),
+	(129, 36, 'https://www.linkedin.com/in/aishmita-aggarwal-25bb6980/', 'Linux, SQL, Oracle, HTML5'),
+	(131, 36, 'https://www.linkedin.com/in/sourabh-gupta-7b8b767b/', 'SQL, HTML, Node.js, CSS'),
+	(132, 36, 'https://www.linkedin.com/in/vijayta-panchal-5b57234/', 'jQuery, Git, Ruby'),
+	(134, 36, 'https://www.linkedin.com/in/anuragjain89/', 'Ruby, Linux, SQL'),
+	(135, 36, 'https://www.linkedin.com/in/pankaj-verma-786ba89/', 'HTML, CSS, Bootstrap'),
+	(136, 36, 'https://www.linkedin.com/in/bansalakhil3010/', 'Git, JSON, MySQL'),
+	(137, 36, 'https://www.linkedin.com/in/neha-sharma-a7252028/', 'HTML, CSS, Bootstrap'),
+	(139, 36, 'https://www.linkedin.com/in/tanmay3011/', 'MySQL, JavaScript, Git'),
+	(140, 36, 'https://www.linkedin.com/in/manishrawat0212/', 'Linux, MySQL, jQuery'),
+	(141, 36, 'https://www.linkedin.com/in/prateek-sharma-13103718/', 'C, C  , Swift'),
+	(142, 37, 'https://www.linkedin.com/in/abhiram-dasari-282210b9/', 'java ,J2EE web Services developer'),
+	(143, 37, 'https://www.linkedin.com/in/paddu-padmaja-b43811133/', 'java,J2EE web Services, ios app developer'),
+	(144, 37, 'https://www.linkedin.com/in/akashdev1/', 'javascript, eclipse, software development developer');
+/*!40000 ALTER TABLE `employee` ENABLE KEYS */;
+
+-- Dumping structure for table vinay.employer
+CREATE TABLE IF NOT EXISTS `employer` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `NAME` varchar(50) DEFAULT NULL,
+  `LINKEDIN` varchar(500) DEFAULT NULL,
+  `WEBSITE` varchar(500) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=38 DEFAULT CHARSET=latin1;
+
+-- Dumping data for table vinay.employer: ~27 rows (approximately)
+DELETE FROM `employer`;
+/*!40000 ALTER TABLE `employer` DISABLE KEYS */;
+INSERT INTO `employer` (`ID`, `NAME`, `LINKEDIN`, `WEBSITE`) VALUES
+	(1, 'MURALI', 'aravapallimurali@gmail.com', 'bobthebuilder.com'),
+	(2, 'DIVYA', 'divya.maddipudi1@gmail.com', 'divyamaddipudi.com'),
+	(3, 'VINAY', 'srivinay.appari@gmail.com', 'vinaytheiceman.com'),
+	(4, 'uKnowva', 'https://www.linkedin.com/company/uknowvaplatform/', 'https://uknowva.com/'),
+	(5, 'accenture', 'https://www.linkedin.com/company/accenture/', 'http://www.accenture.com/'),
+	(6, 'NMSWorks Software (P) Ltd.,', 'https://www.linkedin.com/company/nmsworks-software-p-ltd--/', 'http://www.nmsworks.co.in/'),
+	(7, 'HCL', 'https://www.linkedin.com/company/hcl-technologies/', 'http://www.hcltech.com/'),
+	(8, 'Braddock infotech p Ltd', 'https://www.linkedin.com/company/braddock-infotech-p-ltd/', 'http://braddockinfotech.com/'),
+	(9, 'IBM', 'https://www.linkedin.com/company/ibm/', 'http://www.ibm.com/'),
+	(10, 'OLX Group', 'https://www.linkedin.com/company/olx-group/', 'http://www.olxgroup.com/'),
+	(11, 'indegene', 'https://www.linkedin.com/company/indegene/', 'https://www.indegene.com/'),
+	(12, 'Symantec', 'https://www.linkedin.com/company/symantec/', 'http://www.symantec.com/'),
+	(13, 'CGI', 'https://www.linkedin.com/company/cgi/', 'http://www.cgi.com/'),
+	(20, 'Sapienet', 'https://www.linkedin.com/company/sapient/', 'http://www.sapient.com/'),
+	(22, 'contis', 'https://www.linkedin.com/company/contis-/', 'http://www.contis.com/'),
+	(23, 'paramarsh informatics pvt ltd.', 'https://www.linkedin.com/company/paramarsh-informatics-pvt-ltd./', 'http://www.paramarsh.com/'),
+	(25, 'CloudAssert', 'https://www.linkedin.com/company/cloud-assert/', 'http://www.cloudassert.com/'),
+	(26, 'Relyon Softech Ltd.', 'https://www.linkedin.com/company/relyon-softech-ltd-/', 'http://www.relyonsoft.com'),
+	(27, 'Microsoft', 'https://www.linkedin.com/company/microsoft/', 'http://www.news.microsoft.com/'),
+	(28, 'Epic', 'https://www.linkedin.com/company/epic_163658/', 'https://careers.epic.com/'),
+	(29, 'Huawei Technologies India', 'https://www.linkedin.com/company/huawei-india-r', 'http://www.huawei.com/in'),
+	(30, 'BankBazaar India', 'https://www.linkedin.com/company/bank_bazaar/', 'http://www.bankbazaar.com'),
+	(31, 'Oracle', 'https://www.linkedin.com/company/oracle/', 'http://www.oracle.com'),
+	(33, 'Delhivery', 'https://www.linkedin.com/company/delhivery/', 'http://www.delhivery.com'),
+	(34, 'Vinam Solutions Pvt Ltd', 'https://www.linkedin.com/company/vinam-solutions-pvt-ltd/', 'http://www.vinamsolutions.com'),
+	(35, 'Infoview Technologies Pvt Limited', 'https://www.linkedin.com/company/infoview-technologies-pvt-limited/', 'http://www.ivtlinfoview.com'),
+	(36, 'VinSol', 'https://www.linkedin.com/company/vinsol/', 'http://vinsol.com'),
+	(37, 'yugasys private ltd', 'https://www.linkedin.com/company/yugasys-private-limited/', 'http://www.yugasys.com');
+/*!40000 ALTER TABLE `employer` ENABLE KEYS */;
+
+/*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
+/*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

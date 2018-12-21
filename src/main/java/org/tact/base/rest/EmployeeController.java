@@ -138,7 +138,7 @@ public class EmployeeController {
 	 * @return
 	 * 
 	 *Possible urls:
-	 * 		http://localhost:1878/skills/by/employer_id
+	 * 		http://localhost:1878/employee/skills/by/employer_id
 	 * 
 	 */
 	@GetMapping(value = "/skills/by/employer_id")
