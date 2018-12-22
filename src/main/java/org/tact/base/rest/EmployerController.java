@@ -83,6 +83,7 @@ public class EmployerController {
      * @param name
      * @param linkedin
      * @param website
+     * @param region
      * @return
      * 
      * Possible urls:
@@ -92,13 +93,15 @@ public class EmployerController {
 	public  <T> T addEmployer(
 		@RequestParam(value = "name")String name,
 		@RequestParam(value = "linkedin")String linkedin,
-		@RequestParam(value = "website")String website
+		@RequestParam(value = "website")String website,
+		@RequestParam(value = "region")String region
 	)
 	{
     	Map<String, Object> params = new HashMap<String, Object>();
     	params.put("NAME", name);
     	params.put("LINKEDIN", linkedin);
     	params.put("WEBSITE", website);
+    	params.put("REGION", region);
     	
 		employerMapper.addEmployer(params);
 		 
@@ -115,6 +118,7 @@ public class EmployerController {
      * @param name
      * @param linkedin
      * @param website
+     * @param region 
      * @return
      * 
      * Possible urls:
