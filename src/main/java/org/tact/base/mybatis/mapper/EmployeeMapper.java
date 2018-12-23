@@ -22,5 +22,5 @@ public interface EmployeeMapper {
 	
 	List<Employee> findSkillsByEmployerId(@Param("employer_id") Long employerId);
 
-	
+	List<Employee> findSkillsByRegion(@Param("region") String region);
 }

@@ -177,7 +177,7 @@
 			"response": []
 		},
 		{
-			"name": "getEmployee",
+			"name": "employeeById",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -208,7 +208,7 @@
 			"response": []
 		},
 		{
-			"name": "employerId",
+			"name": "employeeByEmployerId",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -271,6 +271,37 @@
 						{
 							"key": "skills",
 							"value": "linux, ubuntu"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteEmployee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:1878/employee/delete/employee?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1878",
+					"path": [
+						"employee",
+						"delete",
+						"employee"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
 						}
 					]
 				}

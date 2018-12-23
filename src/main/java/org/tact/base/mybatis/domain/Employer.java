@@ -13,50 +13,53 @@ public class Employer implements Serializable {
 	private String linkedin;
 
 	private String website;
+	
+	private String region;
 
 
 	public Long getId() {
 		return id;
 	}
 
-
 	public void setId(Long id) {
 		this.id = id;
 	}
-
 
 	public String getName() {
 		return name;
 	}
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
 
 	public String getLinkedin() {
 		return linkedin;
 	}
 
-
 	public void setLinkedin(String linkedin) {
 		this.linkedin = linkedin;
 	}
-
 
 	public String getWebsite() {
 		return website;
 	}
 
-
 	public void setWebsite(String website) {
 		this.website = website;
+	}
+
+	public String getRegion() {
+		return region;
+	}
+
+	public void setRegion(String region) {
+		this.region = region;
 	}
 
 
 	@Override
 	public String toString() {
-		return getId() + "," + getName() + "," + getLinkedin() + "," + getWebsite();
+		return getId() + "," + getName() + "," + getLinkedin() + "," + getWebsite() + "," + getRegion();
 	}	
 }
