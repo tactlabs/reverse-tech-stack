@@ -152,5 +152,23 @@ public class EmployeeController {
         return (T) map;
     }
 
+	/**
+	 * 
+	 * @param region
+	 * @return
+	 * 
+	 * Possible urls:
+	 * 		http://localhost:1878/employee/skills/by/region
+	 */
+    @GetMapping(value = "skills/by/region")
+    public <T> T getEmployeeSkillsByRegion(
+    		@RequestParam(value = "region")String region) {
+        Map<String, Object> map = new LinkedHashMap<String, Object>();
+        
+        map.put("region", region);
+        map.put("skills", employeeMapper.findSkillsByRegion(region));
+        
+        return (T) map;
+    }
 
 }

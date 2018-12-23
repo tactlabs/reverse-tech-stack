@@ -38,4 +38,8 @@
         select skills from employee where employer_id = #{employer_id}
     </select>  
 
+    <select id="findSkillsByRegion" resultType="org.tact.base.mybatis.domain.Employee" parameterType="string">
+        select * from employee where region = #{region}
+    </select>    
+
 </mapper>
