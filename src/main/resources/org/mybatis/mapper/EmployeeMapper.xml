@@ -39,7 +39,9 @@
     </select>  
 
     <select id="findSkillsByRegion" resultType="org.tact.base.mybatis.domain.Employee" parameterType="string">
-        select * from employee where region = #{region}
+        select e.skills from employee e
+        inner join employer c on e.employer_id = c.id 
+        where region = #{region}
     </select>    
 
 </mapper>

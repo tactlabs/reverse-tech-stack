@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.tact.base.mybatis.domain.Employee;
 import org.tact.base.mybatis.mapper.EmployeeMapper;
 
 @RestController
@@ -166,7 +167,30 @@ public class EmployeeController {
         Map<String, Object> map = new LinkedHashMap<String, Object>();
         
         map.put("region", region);
-        map.put("skills", employeeMapper.findSkillsByRegion(region));
+        
+        List<Employee> employeeList = employeeMapper.findSkillsByRegion(region);
+        
+        Map<String, Integer> skillMap = new LinkedHashMap<String, Integer>();
+        
+        for (Employee employee : employeeList) {
+			String skills = employee.getSkills();
+			
+			String[] skillsArray = skills.split(",");
+			
+			for (int i = 0; i < skillsArray.length; i++) {
+				String skill = skillsArray[i].trim().toLowerCase();
+						
+				if(skillMap.containsKey(skill)) {
+					int counter = skillMap.get(skill);
+					
+					skillMap.put(skill, counter+1);
+				} else {
+					skillMap.put(skill, 1);
+				}
+			}
+ 		}       
+        
+        map.put("skills", skillMap);
         
         return (T) map;
     }
