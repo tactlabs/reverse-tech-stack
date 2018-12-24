@@ -179,6 +179,7 @@ public class EmployeeController {
 			
 			for (int i = 0; i < skillsArray.length; i++) {
 				String skill = skillsArray[i].trim().toLowerCase();
+				skill = getTechParent(skill);
 						
 				if(skillMap.containsKey(skill)) {
 					int counter = skillMap.get(skill);
@@ -192,10 +193,26 @@ public class EmployeeController {
         
         // parent grouping
         
-        
         map.put("skills", skillMap);
         
         return (T) map;
+    }
+    
+    
+    public String getTechParent(String key) {
+    	
+    	key = key.toLowerCase();
+    	
+    	if(key.equalsIgnoreCase("spring"))
+    		return "java";
+    	
+    	if(key.equalsIgnoreCase("hibernate"))
+    		return "java";
+    	
+    	if(key.equalsIgnoreCase("maven"))
+    		return "java";
+    	return "mis";
+    		
     }
 
 }
