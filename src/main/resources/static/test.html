@@ -5,8 +5,8 @@
 </head>
 <body>
 <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
-<h1>reverse tech stack</h1>
-<p>This is a paragraph.</p>
+<h1>Reverse Tech Stack</h1>
+<p></p>
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script>
@@ -79,14 +79,14 @@ function plotGraph(skills){
 	            borderWidth: 0,
 	            dataLabels: {
 	                enabled: true,
-	                format: '{point.y:.1f}%'
+	                format: '{point.y}'
 	            }
 	        }
 	    },
 
 	    tooltip: {
 	        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
-	        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+	        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y}</b> of total<br/>'
 	    },
 
 	    "series": [

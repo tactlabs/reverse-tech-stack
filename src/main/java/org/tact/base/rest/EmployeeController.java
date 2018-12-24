@@ -210,7 +210,127 @@ public class EmployeeController {
     		return "java";
     	
     	if(key.equalsIgnoreCase("maven"))
-    		return "java";
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("JSP"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("servlets"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("spring frame work"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("java"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("core java"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("j2ee"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("EJB"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("jdbc"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("spring core"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("struts"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("spring mvc"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("jsf"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("Hadoop"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("clearcase"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("springboot"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("c"))
+            return "java";
+    	
+    	if(key.equalsIgnoreCase("c++"))
+            return "java";
+    	if(key.equalsIgnoreCase("larvel"))
+            return "PHP";
+    	
+    	if(key.equalsIgnoreCase("code ignite"))
+            return "PHP";
+    	
+    	if(key.equalsIgnoreCase("php"))
+            return "PHP";
+    	
+    	if(key.equalsIgnoreCase("html"))
+            return "Web Technologies ";
+    	
+    	if(key.equalsIgnoreCase("html5"))
+            return "Web Technologies ";
+    	
+    	if(key.equalsIgnoreCase("web development"))
+            return "Web Technologies ";
+    	
+    	if(key.equalsIgnoreCase("css"))
+            return "Web Technologies ";
+
+    	if(key.equalsIgnoreCase("bootstrap"))
+            return "Web Technologies ";
+    	
+    	if(key.equalsIgnoreCase("node.js"))
+            return "nodeJS";
+    	
+    	if(key.equalsIgnoreCase("javascript"))
+            return "javascript";
+    
+    	if(key.equalsIgnoreCase("qtp"))
+            return "javascript";
+    	
+    	if(key.equalsIgnoreCase("ruby"))
+            return "javascript";
+    	
+    	if(key.equalsIgnoreCase("jquery"))
+            return "javascript";
+    	
+    	if(key.equalsIgnoreCase("typescript"))
+            return "AngularJS";
+    	
+    	if(key.equalsIgnoreCase("angular4"))
+            return "AngularJS";
+    	
+    	if(key.equalsIgnoreCase("angularjs"))
+            return "AngularJS";
+    	
+    	if(key.equalsIgnoreCase("angular"))
+            return "AngularJS";
+    	
+    	if(key.equalsIgnoreCase("webscrapping"))
+            return "python";
+    	
+    	if(key.equalsIgnoreCase("python"))
+            return "python";
+    	
+    	if(key.equalsIgnoreCase("selenium testing"))
+            return "python";
+    	
+    	if(key.equalsIgnoreCase("reactjs"))
+            return "Reactjs";
+    	
+    	if(key.equalsIgnoreCase("AWS"))
+            return "AWS";
+    	
+    	if(key.equalsIgnoreCase("Docker"))
+            return "AWS";
+    	
     	return "mis";
     		
     }
